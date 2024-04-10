@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI Test 1234
+name: CI Test 12345
 
 # Controls when the workflow will run
 on:
@@ -32,11 +32,11 @@ jobs:
       uses: ServiceNow/servicenow-devops-change@v3.0.0
       with:
         # Devops Integration Token
-        devops-integration-token: lOI2gnXPrJb7S15XL0OulLMjecYUfgrs
+        devops-integration-token: 6Ygc7oqmxsC4iVGdcXxiVDrFFfpmG0Zn
         # ServiceNow Instance URL
         instance-url: https://dev243315.service-now.com/
         # Orchestration Tool Id
-        tool-id: 1c96f46cc3e9421042b9fc0ed4013118
+        tool-id: 102545a8c36d421042b9fc0ed4013135
         # GitHub Context
         context-github: ${{ toJSON(github) }}
         # Display Name of the Job
