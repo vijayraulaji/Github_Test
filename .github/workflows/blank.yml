@@ -43,8 +43,8 @@ jobs:
         uses: ServiceNow/servicenow-devops-change@v3.1.0
         id: create
         with:
-          devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
-          devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
+          devops-integration-user-name: devops.integration.user
+          devops-integration-user-password: mjbMM,]SN{EPPcwXlO&3]G$zzEu!wC73N}zh<{n{.B_tS{TPw6N%.6O})Ayd>p!RC_Rq3G]^}YcWcl9kRpD{q@[$na4T%JAuu6s@
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
