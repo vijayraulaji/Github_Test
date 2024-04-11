@@ -43,18 +43,16 @@ jobs:
         uses: ServiceNow/servicenow-devops-change@v3.1.0
         id: create
         with:
-          devops-integration-user-name: devops.integration.user
-          devops-integration-user-password: mjbMM,]SN{EPPcwXlO&3]G$zzEu!wC73N}zh<{n{.B_tS{TPw6N%.6O})Ayd>p!RC_Rq3G]^}YcWcl9kRpD{q@[$na4T%JAuu6s@
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
           job-name: 'Deploy'
-          change-request: '{"setCloseCode":"true","autoCloseChange":true,"attributes":{"requested_by":{"name": "Test User"},"assignment_group":{"name": "Change Approval Team"},"priority": "2", "category": "DevOps", "devops_change": true, "short_description":"Devops change from GitHub Integration", "comments": "This is a sample pipeline script to be added in your change step","work_notes": "Update this to work_notes","start_date": "2024-04-11 08:59:59","end_date": "2023-04-11 10:41:59"}}'
+          change-request: '{"setCloseCode":"true","autoCloseChange":false,"attributes":{"requested_by":{"name": "Test User"},"assignment_group":{"name": "Change Approval Team"},"priority": "2", "category": "DevOps", "devops_change": true, "short_description":"Devops change from GitHub Integration", "comments": "This is a sample pipeline script to be added in your change step","work_notes": "Update this to work_notes","start_date": "2024-04-11 08:59:59","end_date": "2023-04-11 10:41:59"}}'
           interval: '100'
           timeout: '3600'
           changeCreationTimeOut: '3600'
-          abortOnChangeCreationFailure: true
-          abortOnChangeStepTimeout: true
+          abortOnChangeCreationFailure: false
+          abortOnChangeStepTimeout: false
           deployment-gate: '{"environment":"deploymentgate","jobName":"Deploy"}'
       - name: Output of Change Creation
         run: echo "change-request-number = ${{ steps.create.outputs.change-request-number }}" >> $GITHUB_OUTPUT
