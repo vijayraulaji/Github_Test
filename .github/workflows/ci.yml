@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:     
       - name: ServiceNow Get Change
-        uses: ServiceNow/servicenow-devops-change@v3.1.0
+        uses: ServiceNow/servicenow-devops-get-change@v3.1.0
         with:
           devops-integration-user-name: devops.integration.user
           devops-integration-user-password: mjbMM,]SN{EPPcwXlO&3]G$zzEu!wC73N}zh<{n{.B_tS{TPw6N%.6O})Ayd>p!RC_Rq3G]^}YcWcl9kRpD{q@[$na4T%JAuu6s@
